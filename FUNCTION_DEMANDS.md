@@ -30,7 +30,7 @@ return error
 # Function with implemented algorithm: Climbing a Hill  
 name: Climbing_a_hill__name_of_colaborator_index  
 inputs:1) Matrix
-*2) LOl  
+* 2) LOl  
 outputs:1) different numpy array matrix with same dimensions as initial and with same restrictions  
 comments: #below function definition make comments on uniqueness of function before any code within function  
 example:  
