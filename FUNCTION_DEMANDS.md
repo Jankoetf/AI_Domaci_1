@@ -4,7 +4,7 @@ inputs:1) Dimensionality of matrix that will be created - n - integer
 output:1) Nympy array with dimensions n*n, with elements from 1 to n**2, in random order without repetition   
 example:  
 def super_matrix_creation__Yungulovski_(n):  
-    ...  
+    ... code ...  
     return super_matrix  
   
 # Function that finds one local solution from existing one:  
@@ -15,7 +15,7 @@ comments: #below function definition make comments on uniqueness of function bef
 example:  
 def local_search__Yungulovski_1(super_matrix):  
 #my function swithes two random elements of initial matrix within the same randomly choosen column  
-...  
+... code ...  
 return new_super_matrix  
   
 # Function that finds error funktion for given matrix - Universal function  
@@ -24,7 +24,7 @@ inputs: 1) Matrix
 outputs: 1) error - real  
 example:  
 def error_function__Yungulovski_(super_matrix):  
-...  
+... code ...  
 return error  
   
 # Function with implemented algorithm: Climbing a Hill  
@@ -42,7 +42,7 @@ comments: #below function definition make comments on uniqueness of function bef
 example:  
 def Climbing_a_hill__Yungulovski_1(max_depth, depth, crazy_matrix, branches, list_of_errors):  
 #my function preserves best matrix in every iteration, list_of_errors at the output is monotonous  
-...  
+... code ...  
 return new_super_matrix_so_far, list_of_errors  
   
 # LOL 
