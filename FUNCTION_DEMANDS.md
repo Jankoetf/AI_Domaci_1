@@ -1,4 +1,4 @@
-# Function for creation of super matrix:
+# Function for creation of super matrix: - Universal function  
 name: super_matrix_creation__name_of_colaborator_  
 inputs:1) Dimensionality of matrix that will be created - n - integer  
 output:1) Nympy array with dimensions n*n, with elements from 1 to n**2, in random order without repetition   
@@ -15,6 +15,15 @@ example:
 def local_search_random_change__Yungulovski_(super_matrix):  
 ...  
 return new_super_matrix  
+  
+# Function that finds error funktion for given matrix - Universal function  
+name: error_function__name_of_colaborator_  
+inputs: 1) Matrix  
+outputs: 1) error - real or integer  
+example:  
+def error_function__Yungulovski_(super_matrix):  
+...  
+return error  
   
 #
   
