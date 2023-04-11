@@ -21,13 +21,25 @@ return new_super_matrix
 # Function that finds error funktion for given matrix - Universal function  
 name: error_function__name_of_colaborator_  
 inputs: 1) Matrix  
-outputs: 1) error - real or integer  
+outputs: 1) error - real  
 example:  
 def error_function__Yungulovski_(super_matrix):  
 ...  
 return error  
   
-# Climbing_a_hill 
+# Function with implemented algorithm: Climbing a Hill  
+name: Climbing_a_hill__name_of_colaborator_index  
+inputs:1) Matrix
+*Tabspace* 2) LOl  
+outputs:1) different numpy array matrix with same dimensions as initial and with same restrictions  
+comments: #below function definition make comments on uniqueness of function before any code within function  
+example:  
+def Climbing_a_hill__Yungulovski_1(super_matrix):  
+#my function swithes two random elements of initial matrix within the same randomly choosen column  
+...  
+return new_super_matrix  
+  
+#  
   
   
 
