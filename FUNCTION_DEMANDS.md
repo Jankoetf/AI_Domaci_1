@@ -28,16 +28,22 @@ def error_function__Yungulovski_(super_matrix):
 return error  
   
 # Function with implemented algorithm: Climbing a Hill  
+#this algorithm is often implemented by recursion so we need to memorize current depth and list_of_errors  
 name: Climbing_a_hill__name_of_colaborator_index  
-inputs:1) Matrix
-* 2) LOl  
-outputs:1) different numpy array matrix with same dimensions as initial and with same restrictions  
+inputs:1) max_depth - number  
+2) current_depth - number  
+3) matrix  
+4) number_of_branches_at_every_iteration - number  
+5) list_of_errors - list of errors at every iteration   
+#break algorithm when you have perfect matrix or at max_depth  
+outputs:1) best_matrix_so_far  
+2) list_of_errors  
 comments: #below function definition make comments on uniqueness of function before any code within function  
 example:  
-def Climbing_a_hill__Yungulovski_1(super_matrix):  
-#my function swithes two random elements of initial matrix within the same randomly choosen column  
+def Climbing_a_hill__Yungulovski_1(max_depth, depth, crazy_matrix, branches, list_of_errors):  
+#my function preserves best matrix in every iteration, list_of_errors at the output is monotonous
 ...  
-return new_super_matrix  
+return new_super_matrix_so_far, list_of_errors    
   
 #  
   
