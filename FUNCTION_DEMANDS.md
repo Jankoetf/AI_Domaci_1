@@ -41,11 +41,11 @@ outputs:1) best_matrix_so_far
 comments: #below function definition make comments on uniqueness of function before any code within function  
 example:  
 def Climbing_a_hill__Yungulovski_1(max_depth, depth, crazy_matrix, branches, list_of_errors):  
-#my function preserves best matrix in every iteration, list_of_errors at the output is monotonous
+#my function preserves best matrix in every iteration, list_of_errors at the output is monotonous  
 ...  
-return new_super_matrix_so_far, list_of_errors    
+return new_super_matrix_so_far, list_of_errors  
   
-#  
+# LOL 
   
   
 
