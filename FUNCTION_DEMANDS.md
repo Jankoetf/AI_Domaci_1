@@ -11,6 +11,7 @@ def super_matrix_creation__Yungulovski_(n):
 name: local_search_random_change__name_of_colaborator__index  
 inputs:1) Matrix than needs local change  
 outputs:1) different numpy array matrix with same dimensions as initial and with same restrictions  
+comments: #below function definition make comments on uniqueness of function before any code within function  
 example:  
 def local_search_random_change__Yungulovski__1(super_matrix):  
 #comments on uniqueness of function  
