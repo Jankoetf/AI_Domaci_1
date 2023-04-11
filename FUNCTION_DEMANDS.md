@@ -7,10 +7,19 @@ def super_matrix_creation__Yungulovski_(n):
     ...  
     return super_matrix  
   
-# Function that finds local solution from existing one:  
+# Function that finds one local solution from existing one:  
 name: local_search_random_change__name_of_colaborator_  
 inputs:1) Matrix than needs local change  
-outputs:1) Numpy array matrix with same dimensions as initial
+outputs:1) different numpy array matrix with same dimensions as initial and with same restrictions  
+example:  
+def local_search_random_change__Yungulovski_(super_matrix):  
+...  
+return new_super_matrix  
+  
+#
+  
+  
+  
 
 
 
