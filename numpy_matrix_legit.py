@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def numpy_matrix_legit_shit():
+def numpy_matrix_legit():
     a1D = np.array([1,2,3])
     b1D = np.array([0,5,10])
     a2D = np.array([[2,5,1], [0,1,4], [0, 0, 10]])
@@ -25,4 +25,4 @@ def numpy_matrix_legit_shit():
     print("np.fliplr(a2D)*np.diag(np.ones(a.shape[0]) - showing side diagonal:\n", np.fliplr(np.fliplr(a2D)*np.diag(np.ones(a2D.shape[0]))))
     print("np.diag(np.fliplr(a2D)) - getting side diagonal", np.diag(np.fliplr(a2D)))
     
-numpy_matrix_legit_shit()
+numpy_matrix_legit()
