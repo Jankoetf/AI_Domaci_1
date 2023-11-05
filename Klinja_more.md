@@ -69,8 +69,7 @@ def analize_random_search():
         errors.append(Random_search(3, 200))
     
     return np.mean(errors), np.std(errors)
-    
-#print(analize_random_search())
+    #print(analize_random_search())
 
 #b) analiza climbinga
 def Climbing_a_hill(max_depth, depth, crazy_matrix, branches,list_of_errors, preserving_best = True,verbose = True):
@@ -109,8 +108,6 @@ def analize_Climbing():
         errors_analize.append(randomed[1])
     
     return np.mean(errors_analize), np.std(errors_analize)
-        
-    
 #print(analize_Climbing())
 
 
@@ -140,7 +137,6 @@ def Local_Beam_Search_basic(crazy_matrixes, max_depth, depth, branches, num_of_c
                 
         
         #print(list_of_matrixes_and_errors)
-        #sorted??????///??/???/???/?/ ne radi 
         list_of_errors = [m[0] for m in list_of_matrixes_and_errors]
         Beam_min_graf.append(np.min(list_of_errors))
         Beam_mean_graf.append(np.mean(list_of_errors))
@@ -166,7 +162,6 @@ def analize_beam():
         errors.append(Local_Beam_Search_basic(initial, 10, 0, 4,5))
     
     return np.mean(errors), np.std(errors)
-
 #a = Local_Beam_Search_basic(initial, 10, 0, 4,5)
 #print(a)
 #print(analize_beam())
@@ -212,7 +207,6 @@ def analize_annealing():
         errors.append(np.min(Simulated_annealing(initial, 5, 0.1, 4)[1]))
     
     return np.mean(errors), np.std(errors)
-    
 #print(analize_annealing())
 
 #e) analize genetic:
@@ -304,8 +298,6 @@ def selection__Yungulovsky_1(parents):
     selected_parents = parents[selected]
     #print(selected_parents)
     return selected_parents
-        
-
 #print(selection__Yungulovsky_1(np.array([c,d,M[0], M[1]])))
 
         
@@ -345,8 +337,6 @@ def Genetic_algorithm__Yungulovsky_1(depth, parents):
     #print(error_function(parents[1]))
     #print(min(error_function(parents[0]), error_function(parents[1])))
     return min(error_function(parents[0]), error_function(parents[1]))
-        
-    
 #print(Genetic_algorithm__Yungulovsky_1(20, initial))
 
 def analize_genetic():
@@ -354,80 +344,83 @@ def analize_genetic():
     for i in range(100):
         errors.append(Genetic_algorithm__Yungulovsky_1(20, initial))
     return np.mean(errors), np.std(errors)
-    
 #print(analize_genetic())
 
 
 #4) Gramziva pretraga:
-#Climbing_a_hill(max_depth, depth, crazy_matrix, branches,list_of_errors, preserving_best = True,verbose = True):
-    
-# errors = np.zeros(20)    
-# randomed = Climbing_a_hill(20, 0, initial, 10, errors, False, False)
-# #print(randomed)
-
-# errors = randomed[1]
-# means = []
-# stds = []
-# for i in range(20):
-#     means.append(np.mean(errors[:i]))
-#     stds.append(np.std(errors[:i]))
-
 import matplotlib.pyplot as plt
-# plt.figure()
-# plt.plot(errors)
-# plt.title("Promena greske sa iteracijama")
-# plt.figure()
-# plt.plot(means)
-# plt.title("Promena srednje vrednosti greske sa iteracijama")
-# plt.figure()
-# plt.plot(stds)
-# plt.title("Promena devijacije greske sa iteracijama")
-
-#5) Kaljenje ali ono simultano
-#def Simulated_annealing(crazy_matrix, start_temperature, cooling, iterations, verbose = True):
+def analize_g_2():
+    #Climbing_a_hill(max_depth, depth, crazy_matrix, branches,list_of_errors, preserving_best = True,verbose = True):  
+    errors = np.zeros(20)    
+    randomed = Climbing_a_hill(20, 0, initial, 10, errors, False, False)
+    #print(randomed)
     
+    errors = randomed[1]
+    means = []
+    stds = []
+    for i in range(20):
+        means.append(np.mean(errors[:i]))
+        stds.append(np.std(errors[:i]))
+    plt.figure()
+    plt.plot(errors)
+    plt.title("Promena greske sa iteracijama")
+    plt.figure()
+    plt.plot(means)
+    plt.title("Promena srednje vrednosti greske sa iteracijama")
+    plt.figure()
+    plt.plot(stds)
+    plt.title("Promena devijacije greske sa iteracijama")        
+        
+
+
+
+
+#5) Kaljenje ali simultano
+def analize_a_2():
+    #def Simulated_annealing(crazy_matrix, start_temperature, cooling, iterations, verbose = True):    
+    s, errors, p, t = Simulated_annealing(initial, 5, 0.1, 4)
+    means = []
+    stds = []
+    for i in range(50):
+        means.append(np.mean(errors[:i]))
+        stds.append(np.std(errors[:i]))
     
-# s, errors, p, t = Simulated_annealing(initial, 5, 0.1, 4)
-# means = []
-# stds = []
-# for i in range(50):
-#     means.append(np.mean(errors[:i]))
-#     stds.append(np.std(errors[:i]))
-
-# plt.figure()
-# plt.plot(t)
-# plt.title("Promena temperature greske sa iteracijama")
-# plt.figure()
-# plt.plot(p)
-# plt.title("Promena verovatnoce prihvatanja losijeg resenja")
-
-# plt.figure()
-# plt.plot(means)
-# plt.title("Promena srednje vrednosti greske sa iteracijama")
-# plt.figure()
-# plt.plot(stds)
-# plt.title("Promena devijacije greske sa iteracijama")
+    plt.figure()
+    plt.plot(t)
+    plt.title("Promena temperature greske sa iteracijama")
+    plt.figure()
+    plt.plot(p)
+    plt.title("Promena verovatnoce prihvatanja losijeg resenja")
+    
+    plt.figure()
+    plt.plot(means)
+    plt.title("Promena srednje vrednosti greske sa iteracijama")
+    plt.figure()
+    plt.plot(stds)
+    plt.title("Promena devijacije greske sa iteracijama")
 
 
 #6) pretraga po snopu i genetski
-#Local_Beam_Search_basic(initial, 10, 0, 4,5)
-# print(Beam_min_graf)
-# print(Beam_mean_graf)
-# plt.figure()
-# plt.plot(Beam_min_graf)
-# plt.title("Beam: Promena minimalne greske u populaciji sa iteracijama")
-# plt.figure()
-# plt.plot(Beam_mean_graf)
-# plt.title("Beam: Promena srednje greske u populaciji sa iteracijama")
+def analize_beam_2():
+    #Local_Beam_Search_basic(initial, 10, 0, 4,5)
+    print(Beam_min_graf)
+    print(Beam_mean_graf)
+    plt.figure()
+    plt.plot(Beam_min_graf)
+    plt.title("Beam: Promena minimalne greske u populaciji sa iteracijama")
+    plt.figure()
+    plt.plot(Beam_mean_graf)
+    plt.title("Beam: Promena srednje greske u populaciji sa iteracijama")
 
 
 #)b Genetski
-# Genetic_algorithm__Yungulovsky_1(20, initial)
-# print(Gen_min_graf)
-# print(Gen_mean_graf)
-# plt.figure()
-# plt.plot(Gen_min_graf)
-# plt.title("Gen: Promena minimalne greske u populaciji sa iteracijama")
-# plt.figure()
-# plt.plot(Gen_mean_graf)
-# plt.title("Gen: Promena srednje greske u populaciji sa iteracijama")
+def analize_genetic_2():
+    # Genetic_algorithm__Yungulovsky_1(20, initial)
+    print(Gen_min_graf)
+    print(Gen_mean_graf)
+    plt.figure()
+    plt.plot(Gen_min_graf)
+    plt.title("Gen: Promena minimalne greske u populaciji sa iteracijama")
+    plt.figure()
+    plt.plot(Gen_mean_graf)
+    plt.title("Gen: Promena srednje greske u populaciji sa iteracijama")
