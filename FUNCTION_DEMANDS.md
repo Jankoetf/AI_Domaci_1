@@ -45,7 +45,7 @@ def Climbing_a_hill__Yungulovski_1(max_depth, depth, crazy_matrix, branches, lis
 ... code ...  
 return new_super_matrix_so_far, list_of_errors  
   
-# LOL 
+
   
   
 
