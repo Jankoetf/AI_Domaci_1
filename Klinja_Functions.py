@@ -177,7 +177,6 @@ def Local_Beam_Search_basic(crazy_matrixes, max_depth, depth, branches, num_of_c
                 
         
         #print(list_of_matrixes_and_errors)
-        #sorted??????///??/???/???/?/ ne radi 
         list_of_errors = [m[0] for m in list_of_matrixes_and_errors]
         list_of_matrixes = list(m[1] for m in list_of_matrixes_and_errors)
         #print(list_of_matrixes)
@@ -201,87 +200,6 @@ def Local_Beam_Search_basic(crazy_matrixes, max_depth, depth, branches, num_of_c
 #     print(error_function(m))
     
 # print(s)
-
-
-def Genetic_local_change(parents, num_of_childre):
-    crazy_list = []
-    n = len(parents[0])
-    cut_after = np.random.choice(np.arange(1,n**2), 1)
-    for m in parents:
-        crazy_list.append(np.reshape(m, (1, n**2)))
-    
-    crazy_children = []
-    
-    
-        
-        
-        
-    
-    
-    
-    
-    
-    
-    
-    
-        
-
-def Genetic_Algorithm(crazy_matrixes, max_depth, depth, mutation):
-    n = len(crazy_matrixes[0])
-    
-    
-    if depth == 0:
-        s = [np.array(crazy_matrixes)]
-    else:
-        s = np.array(crazy_matrixes)
-
-    if depth == max_depth:
-        return crazy_matrixes
-    else:
-        pass    
-        
-Genetic_local_change(s)
-        
-    
-    
-    
-    
-    
-    
-        
-    
-
-            
-            
-               
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     
